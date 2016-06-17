@@ -8,11 +8,11 @@ def breadth_first_search( n, b_tree)
 	q = []
 	visited = [working]
 	until working.nil? || working.root == n
-		unless working.left.nil?
+		if working.left
 			q << working.left
 			visited << working.left
 		end
-		unless working.right.nil?
+		if working.right
 			q << working.right
 			visited << working.right
 		end
